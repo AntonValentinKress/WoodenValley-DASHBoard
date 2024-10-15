@@ -1,0 +1,38 @@
+html { /*Allgemeiner Hintergrund vor dem ersten DIV*/
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #484644; 
+    color: #FFFFFF;
+}
+
+div.app-header {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: thin lightgrey solid;
+    margin-bottom: 2px;
+}
+div.app-header h1 {
+    float: left;
+    margin-top: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+div.app-body {
+    height: fit-content;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+}
+
+div.timestamp {
+    text-align: right;
+    font-size: medium;
+    white-space: nowrap;
+}
+
+img.qr-code {
+    height: 100px;
+    width: 100px;
+}
