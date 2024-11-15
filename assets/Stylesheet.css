@@ -36,3 +36,11 @@ img.qr-code {
     height: 100px;
     width: 100px;
 }
+
+div.wrapper-tips {
+    background-color: #303030;
+    color: crimson;
+    margin: 5px;
+    padding: 5px;
+
+}
