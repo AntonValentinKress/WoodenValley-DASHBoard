@@ -1,0 +1,19 @@
+# Zu DASHBoard-Ordner navigieren
+
+python3 -m venv venv
+/home/anton/python/SFM-Projekt2/DASHBoard/venv/bin/python
+
+venv/bin/pip install XYZ
+
+
+pytz
+requests
+segno
+pandas
+plotly
+dash
+openpyxl
+xgboost
+matplotlib
+seaborn
+scikit-learn

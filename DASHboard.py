@@ -41,7 +41,7 @@ def RystaDashboard():
                 html.Div(className="timestamp", id='live-update-text'),
                 dcc.Interval(
                     id='interval-component',
-                    interval=10*1000,
+                    interval=1*1000,
                     n_intervals=0
                 )
             ]),
@@ -69,29 +69,37 @@ def RystaDashboard():
             ], style={'display': 'flex', 'width': '100%'}),
 
             #Tabellenkomponenten und Handlungsempfehlungen
-            html.Div(className="wrapper-table", children=[
-                html.Div([
-                        html.H4("Randdaten historischer Messwerte"),
-                        dash_table.DataTable(
-                            id='live-update-table',
-                            columns=[],  # Die Spalten werden im Callback aktualisiert
-                            data=[],     # Die Daten werden im Callback aktualisiert
-                            #page_size=20  # Optional: Anzahl der Zeilen pro Seite
-                            style_as_list_view=True,
-                            style_cell={'padding': '5px', 'backgroundColor': '#2B2B30'},
-                            style_header={
-                                'backgroundColor': '#303030',
-                                'fontWeight': 'bold'
-                            },
-                        ),
-                        dcc.Interval(
-                            id='interval-table',
-                            interval=60*1000,
-                            n_intervals=0
-                        )
+            html.Div([
+                html.Div(className="wrapper-tips", children=[
+
+                    html.H4("Aktuelle Messwerte und Handlungsempfehlungen"),
+                    html.P("Temperatur"),
+                    html.P("CO2"),
+                    html.P("Luftfeuchte"),
+
+                    #Hier die Textbausteine einfügen
 
                 ], style={'display': 'inline-block', 'width': '60%'}),
                 html.Div([
+
+                    html.H4("Randdaten historischer Messwerte"),
+                    dash_table.DataTable(
+                        id='live-update-table',
+                        columns=[],  # Die Spalten werden im Callback aktualisiert
+                        data=[],     # Die Daten werden im Callback aktualisiert
+                        #page_size=20  # Optional: Anzahl der Zeilen pro Seite
+                        style_as_list_view=True,
+                        style_cell={'padding': '5px', 'backgroundColor': '#2B2B30'},
+                        style_header={
+                            'backgroundColor': '#303030',
+                            'fontWeight': 'bold'
+                        },
+                    ),
+                    dcc.Interval(
+                        id='interval-table',
+                        interval=60*1000,
+                        n_intervals=0
+                    )
 
                 ], style={'display': 'inline-block', 'width': '40%'})
             ], style={'display': 'flex', 'width': '100%'}),
@@ -169,7 +177,10 @@ def RystaDashboard():
             except:
                 time.sleep(1)
 
+        df = df.transpose()
         df = df.reset_index()
+        df = df.rename(columns={"index": "Metrik"})
+
 
         columns = [{'name': col, 'id': col} for col in df.columns]
         data = df.to_dict('records')
@@ -505,8 +516,8 @@ def RystaDataDescriber(event):
         df.drop(rysta.tst, axis=1, inplace=True)
         df = df.round(1)
 
-        df.drop(["std", "25%", "50%", "75%"], inplace=True)
-        df = df.rename(index={'count': 'Anzahl', 'mean': 'Mittelwert', 'min': 'Minimum', 'max': 'Maximum'})
+        df.drop(["count", "std", "25%", "50%", "75%"], inplace=True)
+        df = df.rename(index={'mean': 'Mittelwert', 'min': 'Minimum', 'max': 'Maximum'})
 
         df.to_json('assets/DataDescription.json', index=True)
 
