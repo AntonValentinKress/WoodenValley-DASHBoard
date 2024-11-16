@@ -1,19 +1,17 @@
 # Zu DASHBoard-Ordner navigieren
 
+#1. venv Erstellen
 python3 -m venv venv
-/home/anton/python/SFM-Projekt2/DASHBoard/venv/bin/python
 
-venv/bin/pip install XYZ
+#2. Module in venv installieren
+venv/bin/pip install pytz requests segno pandas plotly dash openpyxl xgboost matplotlib seaborn scikit-learn
 
+#3. Python Skript über venv ausführen
+venv/bin/python XYZ.py
 
-pytz
-requests
-segno
-pandas
-plotly
-dash
-openpyxl
-xgboost
-matplotlib
-seaborn
-scikit-learn
+#Tipp:
+#"venv/bin" kann weggelassen werden wen venv mit folgendem Code zuerst aktiviert wird
+source venv/bin/activate
+
+#"venv" kann wieder deaktiviert werden
+deactivate

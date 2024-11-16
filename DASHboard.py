@@ -187,8 +187,10 @@ def RystaDashboard():
     
         return columns, data
 
-    #app.run(debug=False, host='0.0.0.0', port=8080)
-    app.run(debug=False, port=8080)
+    if rysta.public == 1:
+        app.run(debug=False, host='0.0.0.0', port=rysta.port)
+    else:
+        app.run(debug=False, port=rysta.port)
 
 def RystaPermaLoader(event):
     while not event.is_set():

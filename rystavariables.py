@@ -3,8 +3,8 @@ Diese Datei enthält die für die Arbeit mit dem Rysta Sensor benötigten Variab
 """
 
 #Gerät
-device = "PQRCUSC3" #HomeOffice - Anton Kreß
-#device = "LHSQREC3" #HomeOffice Raum OG - Robert Böker
+#device = "PQRCUSC3" #HomeOffice - Anton Kreß
+device = "LHSQREC3" #HomeOffice Raum OG - Robert Böker
 #device = "XCUHSXC3" #HomeOffice Raum EG - Robert Böker
 
 #Nutzerdaten
@@ -24,4 +24,5 @@ ml0 = "Lautstärke"
 mp0 = "Luftdruck"
 
 #Dashboard
-port = 8080
+port = 8099
+public = 1 #1 = Netzwerkweit; 0 = Lokaler Rechner
