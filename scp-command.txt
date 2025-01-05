@@ -1,1 +1,0 @@
-scp -r C:/Users/anton/Documents/_Datentausch/1_Studium/1_Unterlagen/SFM/Projekt/DASHBoard anton@192.168.0.178:/home/anton/python/SFM-Projekt2
