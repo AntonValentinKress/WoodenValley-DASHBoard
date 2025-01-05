@@ -1,1 +1,32 @@
-{"Lufttemperatur":{"Mittelwert":18.2,"Minimum":14.6,"Maximum":22.6},"Helligkeit":{"Mittelwert":0.0,"Minimum":0.0,"Maximum":1.9},"CO2-Gehalt":{"Mittelwert":1131.2,"Minimum":402.5,"Maximum":4219.0},"Luftfeuchtigkeit":{"Mittelwert":60.0,"Minimum":43.5,"Maximum":72.0},"Lautst\u00e4rke":{"Mittelwert":31.1,"Minimum":28.2,"Maximum":58.6},"Luftdruck":{"Mittelwert":995.7,"Minimum":982.7,"Maximum":1006.7}}
+{
+    "Lufttemperatur":{
+        "Mittelwert":14.7,
+        "Minimum":12.2,
+        "Maximum":20.8
+    },
+    "Helligkeit":{
+        "Mittelwert":0.0,
+        "Minimum":0.0,
+        "Maximum":0.0
+    },
+    "CO2-Gehalt":{
+        "Mittelwert":635.6,
+        "Minimum":396.0,
+        "Maximum":2488.5
+    },
+    "Luftfeuchtigkeit":{
+        "Mittelwert":44.4,
+        "Minimum":35.7,
+        "Maximum":60.4
+    },
+    "Lautst\u00e4rke":{
+        "Mittelwert":32.0,
+        "Minimum":29.2,
+        "Maximum":59.3
+    },
+    "Luftdruck":{
+        "Mittelwert":994.6,
+        "Minimum":971.8,
+        "Maximum":1008.3
+    }
+}

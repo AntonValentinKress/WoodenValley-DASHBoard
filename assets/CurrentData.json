@@ -1,0 +1,22 @@
+{
+    "Lufttemperatur": {
+        "value": "12.4 °C",
+        "message": "Die Temperatur im Raum ist sehr kalt. Risiko für Unbehagen. Heizung nutzen, Raum isolieren."
+    },
+    "CO2-Gehalt": {
+        "value": "409.5 ppm",
+        "message": "Der CO²-Gehalt im Raum ist ideal. Gute Luftqualität."
+    },
+    "Luftfeuchtigkeit": {
+        "value": "41.9 %",
+        "message": "Die Luftfeuchtigkeit im Raum ist ideal. Gute Luftfeuchtigkeit für angenehmes Raumklima."
+    },
+    "Lautstärke": {
+        "value": "31.9 dB",
+        "message": "Die Lautstärke im Raum ist leise. Angenehm für ruhige Umgebungen."
+    },
+    "Luftdruck": {
+        "value": "974.1 hPa",
+        "message": "Der Luftdruck im Raum ist extrem tief. Starkes Unwetter oder Sturm zu erwarten."
+    }
+}

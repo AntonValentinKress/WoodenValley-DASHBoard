@@ -2,45 +2,104 @@ html { /*Allgemeiner Hintergrund vor dem ersten DIV*/
     border: 0px;
     margin: 0px;
     padding: 0px;
-    background-color: #484644; 
-    color: #FFFFFF;
+    background-color: #012830; 
+    color: #c4c207;
 }
 
-div.app-header {
-    height: 60px;
-    line-height: 60px;
-    border-bottom: thin lightgrey solid;
-    margin-bottom: 2px;
-}
-div.app-header h1 {
-    float: left;
-    margin-top: 0px;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #333; /* Beispielhintergrund */
+    color: white;
+    height: 10vh;
 }
 
-div.app-body {
-    height: fit-content;
+.logo-container img {
+    height: 100%;
+}
+
+.center-container {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.timestamp {
+    font-size: 1rem;
+    color: #c4c207;
+}
+
+.qr-code-container img {
+    height: 10vh;
+    width: auto;
+}
+/* Wrapper für die Messwerte */
+.wrapper-tips {
+    display: grid;
+    background-color: #2B2B30;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    gap: 20px; /* Abstand zwischen den Einträgen */
     width: 100%;
-    margin-top: 5px;
-    background-color: #FFFFFF;
+    padding: 10px;
 }
 
-div.timestamp {
-    text-align: right;
-    font-size: medium;
-    white-space: nowrap;
+/* Einzelne Messwerte */
+.wrapper-tips > div {
+    color: white;
+    padding: 0px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: auto auto; /* Zwei Zeilen: Titel+Wert und Nachricht */
+    align-items: start;
 }
 
-img.qr-code {
-    height: 100px;
-    width: 100px;
+/* Titel und Wert der Metrik in einer Zeile */
+.wrapper-tips > div > div:first-child {
+    display: flex;
+    justify-content: space-between; /* Titel links, Wert rechts */
+    align-items: center; /* Vertikale Ausrichtung */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
 
-div.wrapper-tips {
-    background-color: #303030;
-    color: crimson;
-    margin: 5px;
-    padding: 5px;
+/* Titel der Metrik */
+.wrapper-tips > div > div:first-child > span:first-child {
+    color: #f5f5f5; /* Farbe für den Titel */
+    text-decoration: underline;
+}
 
+/* Wert der Metrik */
+.wrapper-tips > div > div:first-child > span:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c4c207; 
+}
+
+/* Nachricht der Metrik */
+.wrapper-tips > div > div:nth-child(2) {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+.dash-header {
+    color: white;
+}
+
+.dash-cell.column-0 {
+    color: white;
+}
+
+.dokumentation-wrapper Li {
+    color: white;
 }
