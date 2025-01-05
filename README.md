@@ -1,4 +1,4 @@
-# W∞dii Live-Dashboard
+# W∞d.ii Live-Dashboard
 
 Ein interaktives Dashboard zur Anzeige von Echtzeit-Messwerten wie Temperatur, CO2-Gehalt, Luftfeuchtigkeit, Lautstärke und mehr. 
 Das Dashboard wird regelmäßig aktualisiert und bietet eine visuelle Darstellung der Messdaten in Form von Diagrammen und Tabellen.
