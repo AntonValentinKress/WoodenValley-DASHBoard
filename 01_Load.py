@@ -126,4 +126,5 @@ def RystaPermaLoader():
 
     print("Waiting...")
 
-RystaPermaLoader()
+if __name__ == "__main__":
+    RystaPermaLoader()

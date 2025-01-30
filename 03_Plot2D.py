@@ -100,12 +100,13 @@ def LinePlotPermaPlotter():
     # Vorhersage
     # DF anpassen
     df = CreateAiDataFrame(df)
-    # KI
 
+    # KI
     file_name = "assets/reg.pkl"
         
     clf = xgb.XGBRegressor()
     clf = pickle.load(open(file_name, "rb"))
+
     FEATURES = [
         "hour","minute","dayofweek",
         "C1 060 min","C1 090 min","C1 120 min",
@@ -144,4 +145,5 @@ def LinePlotPermaPlotter():
     pio.write_json(fig, "assets/LinePlot.json", pretty=True)
     print("Waiting...")
 
-LinePlotPermaPlotter()
+if __name__ == "__main__":
+    LinePlotPermaPlotter()

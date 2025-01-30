@@ -110,4 +110,5 @@ def SurfacePlotPermaPlotter():
 
     print("Waiting...")
 
-SurfacePlotPermaPlotter()
+if __name__ == "__main__":
+    SurfacePlotPermaPlotter()

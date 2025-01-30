@@ -1,8 +1,8 @@
 {
     "Lufttemperatur":{
-        "Mittelwert":14.7,
+        "Mittelwert":13.6,
         "Minimum":12.2,
-        "Maximum":20.8
+        "Maximum":20.0
     },
     "Helligkeit":{
         "Mittelwert":0.0,
@@ -10,23 +10,23 @@
         "Maximum":0.0
     },
     "CO2-Gehalt":{
-        "Mittelwert":635.6,
+        "Mittelwert":525.3,
         "Minimum":396.0,
-        "Maximum":2488.5
+        "Maximum":2771.5
     },
     "Luftfeuchtigkeit":{
-        "Mittelwert":44.4,
-        "Minimum":35.7,
-        "Maximum":60.4
+        "Mittelwert":43.3,
+        "Minimum":39.3,
+        "Maximum":48.2
     },
     "Lautst\u00e4rke":{
         "Mittelwert":32.0,
-        "Minimum":29.2,
-        "Maximum":59.3
+        "Minimum":29.8,
+        "Maximum":55.2
     },
     "Luftdruck":{
-        "Mittelwert":994.6,
-        "Minimum":971.8,
+        "Mittelwert":992.9,
+        "Minimum":967.2,
         "Maximum":1008.3
     }
 }

@@ -8,18 +8,13 @@ import rystavariables as rysta
 
 def RystaDashboard():
     app = Dash(__name__)
-
-    #Unterdrücken von Konsolenausgaben der Web-App
-    #log = logging.getLogger('werkzeug')
-    #log.setLevel(logging.ERROR)
-
     app.layout = html.Div(className="wrapper", children=[
         html.Div(className="app-header", children=[
             html.Div(className="logo-container", children=[
                 html.Img(src=r"assets/WV_woodii_Logo_Website.png", alt='image', style={'height':'5vh'}),
             ]),
             html.Div(className="center-container", children=[
-                html.H1("W∞dii Live-Dashboard", className="header-title"),
+                html.H1("W∞d.ii Live-Dashboard", className="header-title"),
                 html.Div(className="timestamp", id='live-update-text', style={'color': 'white'}),
                 dcc.Interval(
                     id='interval-component',
@@ -27,6 +22,8 @@ def RystaDashboard():
                     n_intervals=0
                 )
             ]),
+
+
             html.Div(className="qr-code-container", children=[
                 html.Img(className="qr-code", id='live-update-qr', src='/assets/Dashboard.svg'),
                 dcc.Interval(

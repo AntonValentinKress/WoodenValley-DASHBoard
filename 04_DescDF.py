@@ -28,4 +28,5 @@ def RystaDataDescriber():
 
     print("Waiting...")
 
-RystaDataDescriber()
+if __name__ == "__main__":
+    RystaDataDescriber()

@@ -155,4 +155,5 @@ def MostRecentData():
 
     print("Waiting...")
 
-MostRecentData()
+if __name__ == "__main__":
+    MostRecentData()

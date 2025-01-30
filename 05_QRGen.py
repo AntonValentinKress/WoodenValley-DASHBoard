@@ -23,4 +23,5 @@ def RystaPermaQR():
 
     print("Waiting...")
 
-RystaPermaQR()
+if __name__ == "__main__":
+    RystaPermaQR()
